@@ -18,7 +18,7 @@ class App < Sinatra::Base
       team = Team.new(params[:team])
 
       params[:team][:members].each do |member|
-        new_member = Hero.new()
+        new_member = Hero.new(member)
       end
       redirect to '/team'
     end
