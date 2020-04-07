@@ -21,7 +21,7 @@ class App < Sinatra::Base
         new_member = Hero.new(member)
       end
       @heroes = Hero.all
-      redirect to '/team'
+      erb :team
     end
 
 
