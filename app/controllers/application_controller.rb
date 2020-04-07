@@ -15,12 +15,12 @@ class App < Sinatra::Base
 
     post '/teams' do
 
-      team = Team.new(params[:team])
-      binding.pry
+      @team = Team.new(params[:team])
+
       params[:team][:members].each do |member|
         new_member = Hero.new(member)
       end
-      binding.pry
+      @heroes = Hero.all
       redirect to '/team'
     end
 
