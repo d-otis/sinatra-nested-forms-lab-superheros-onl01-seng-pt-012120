@@ -14,8 +14,14 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      @team = params[:team]
-      redirect to '/team'
+
+      @team = Team.new(params[:team])
+
+      params[:team][:members].each do |member|
+        new_member = Hero.new(member)
+      end
+      @heroes = Hero.all
+      erb :team
     end
 
 

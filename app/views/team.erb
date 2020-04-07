@@ -1,23 +1,17 @@
 
 
-<h1>Team <%= @team[:name] %></h1>
+<h1>Team <%= @team.name %></h1>
 
-Team Motto: We love Ruby!
+<h2>Team Motto: <%= @team.motto %></h2>
 
-Hero Name: Amanda
+<% @heroes.each do |hero| %>
 
-Hero Power: Ruby
+  <p>
+    Hero Name: <%= hero.name %>
+    <br>
+    Hero Power: <%= hero.power %>
+    <br>
+    Hero Biography: <%= hero.bio %>
+  </p>
 
-Hero Biography: I love Ruby!
-
-Hero Name: Arel
-
-Hero Power: JavaScript
-
-Hero Biography: I love JavaScript!
-
-Hero Name: Katie
-
-Hero Power: Sinatra
-
-Hero Biography: I love Sinatra!
+<% end %>
