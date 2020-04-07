@@ -17,7 +17,7 @@ class App < Sinatra::Base
       @team = params[:team]
       binding.pry
       team = Team.new(@team)
-      
+
       redirect to '/team'
     end
 
