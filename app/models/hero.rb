@@ -8,6 +8,7 @@ class Hero
     @name = attrs[:name]
     @power = attrs[:power]
     @bio = attrs[:bio]
+    save
   end
 
   def save
