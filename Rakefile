@@ -1,5 +1,5 @@
 require_relative './config/environment'
-require 'sinatra/activerecord/rake'
+require 'rake'
 
 def reload!
   load_all './app'
