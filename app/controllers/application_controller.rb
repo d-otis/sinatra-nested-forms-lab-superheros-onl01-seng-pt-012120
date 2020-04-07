@@ -20,6 +20,7 @@ class App < Sinatra::Base
       params[:team][:members].each do |member|
         new_member = Hero.new(member)
       end
+      binding.pry
       redirect to '/team'
     end
 
